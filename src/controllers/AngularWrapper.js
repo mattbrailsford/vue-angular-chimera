@@ -35,6 +35,7 @@ const AngularWrapper = function ($scope, $element) {
     });
 
     // Initialize the Vue instance
+    let vueEl = $element[0].querySelector('.vue-node');
     let vueApp = new Vue({
         components: { VueComponent },
         data: {
@@ -42,7 +43,7 @@ const AngularWrapper = function ($scope, $element) {
             config: clone($scope.model.config)
         },
         template: '<vue-component :value.sync="value" :config="config" />'
-    }).$mount($element[0].querySelector('.vue-node'))
+    }).$mount(vueEl)
 
 }
 
