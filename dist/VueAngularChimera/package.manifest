@@ -1,0 +1,15 @@
+{
+    propertyEditors: [{
+        name: "Vue Angular Chimera",
+        alias: "VueAngularChimera.Editor",
+        icon: "icon-newspaper",
+        group: "media",
+        editor: {
+            view: "~/app_plugins/VueAngularChimera/views/editor.html",
+            valueType: "JSON"
+        }
+    }],
+    javascript: [
+        "~/app_plugins/VueAngularChimera/js/bundle.js"
+    ]
+}
