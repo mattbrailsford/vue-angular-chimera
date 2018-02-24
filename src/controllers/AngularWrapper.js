@@ -9,6 +9,8 @@ import VueComponent from '../components/VueComponent'
 const AngularWrapper = function ($scope, $element) {
     
     // Helper method to clone an object stripping any "reactivity"
+    // This many not actually be needed as model values in both frameworks
+    // should be simple POCOs but I do it to be safe
     let clone = function (obj) {
         if (obj === null || obj === undefined || typeof obj !== 'object')  {
             return obj
